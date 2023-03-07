@@ -1,0 +1,128 @@
+.container_home {
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+    color: #EDEADE;
+  }
+  h2:before{
+    position:absolute;
+    color:#262626;
+    top:0;
+    left:0;
+    width:0%;
+    overflow:hidden;
+    transition:all 0.5s;
+  }
+}
+ 
+ 
+ .container_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+
+  .card_survivor {
+    width: 150px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+    border-radius: 10px;
+  }
+  
+  .cover-image_survivor {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .wrapper_survivor {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    border-radius: 10px;
+  }
+  
+  .card_survivor:hover .wrapper_survivor {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+  }
+  
+  .wrapper_survivor::before,
+  .wrapper_survivor::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+  }
+  .wrapper_survivor::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  .wrapper_survivor::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  
+  .card_survivor:hover .wrapper_survivor::before,
+  .wrapper_survivor::after {
+    opacity: 1;
+  }
+  
+  .card_survivor:hover .wrapper_survivor::after {
+    height: 120px;
+  }
+  .title_survivor {
+    width: 100%;
+    transition: transform 0.5s;
+    font-family: 'Anton', sans-serif;
+    color: #E2DFD2;
+    font-size: 2rem;
+    text-shadow: 3px 1px 5px rgba(0, 0, 0, 1);
+  }
+  .card_survivor:hover .title_survivor {
+    transform: translate3d(0%, -50px, 100px);
+    color: #841617;
+  }
+  
+  .character_survivor {
+    height: 85%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .card_survivor:hover .character_survivor {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+  }
+   }
