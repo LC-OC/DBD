@@ -1,4 +1,6 @@
-.container_home {
+.container_cards_page {
+  margin-top: 6rem;
+  margin-bottom: 4rem;
   h2 {
     text-align: center;
     text-transform: uppercase;
@@ -16,12 +18,12 @@
     transition:all 0.5s;
   }
 }
- 
- 
+
  .container_cards {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
+    flex-wrap: wrap;
  
 
   .card_survivor {
@@ -33,7 +35,7 @@
     align-items: flex-end;
     padding: 0 36px;
     perspective: 2500px;
-    margin: 0 50px;
+    margin: 2rem 50px;
     border-radius: 10px;
   }
   
@@ -107,10 +109,12 @@
     color: #E2DFD2;
     font-size: 2rem;
     text-shadow: 3px 1px 5px rgba(0, 0, 0, 1);
+    text-decoration: none;
   }
   .card_survivor:hover .title_survivor {
     transform: translate3d(0%, -50px, 100px);
     color: #841617;
+    text-decoration: none;
   }
   
   .character_survivor {

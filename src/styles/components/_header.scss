@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    height: 5.5rem;
+    background-color: #0C090A;
+    color: #EDEADE;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(203, 202, 202, 0.05) 0px 0px 0px 1px inset;
+    h1 {
+        font-size: 4rem;
+        text-shadow: -4px 3px 0 #841617, -14px 7px 0 #030613;
+    }
+    
+    ul {
+        display: flex;
+        li {
+            padding: 1rem;
+            font-size: 1.5rem;
+            color: #EDEADE;
+        }
+    }
+
+}

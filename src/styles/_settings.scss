@@ -3,3 +3,16 @@ body {
     padding:0;
     background:  #1C1C1E;
 }
+
+// retire complètement le style des listings
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+// remove <a> text decoration
+a:link { text-decoration: none; color: #EDEADE; }
+    a:visited { text-decoration: none; color: #EDEADE; }
+    a:hover { text-decoration: none; color: #EDEADE;}
+    a:active { text-decoration: none; color: #EDEADE;}

@@ -1,26 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CardsSurvivors = ({ survivorsInfos }) => {
+  const [survivors] = useState(survivorsInfos);
   console.log(survivorsInfos);
   return (
     <div className="container_cards">
-      {survivorsInfos.map((survivor) => {
+      {survivors.map((survivor) => {
         return (
-          <div key={survivor.id} className="card_survivor">
-            <div className="wrapper_survivor">
+          <Link
+            to={{
+              pathname: `/survivors/${survivor.id}`,
+              state: { survivors: survivor },
+            }}
+          >
+            <div key={survivor.id} className="card_survivor">
+              <div className="wrapper_survivor">
+                <img
+                  src={survivor.img_wraper}
+                  className="cover-image_survivor"
+                  alt=""
+                />
+              </div>
               <img
-                src={survivor.img_wraper}
-                className="cover-image_survivor"
-                alt=""
+                src={survivor.img}
+                alt={survivor.name}
+                className="character_survivor"
               />
+              <p className="title_survivor">{survivor.name}</p>
             </div>
-            <img
-              src={survivor.img}
-              alt={survivor.name}
-              className="character_survivor"
-            />
-            <p className="title_survivor">{survivor.name}</p>
-          </div>
+          </Link>
         );
       })}
     </div>

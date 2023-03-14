@@ -1,8 +1,7 @@
 import React from "react";
 //import { useParams } from "react-router-dom";
 //import { getSurvivorsData } from "../services/FetchData";
-import CardsSurvivors from "../components/CardsSurvivors";
-import { SURVIVORS_DATA } from "../data/survivors";
+import Header from "../components/Header";
 
 const Home = () => {
   /*const { id } = useParams();
@@ -17,10 +16,8 @@ const Home = () => {
   console.log(survivorData);*/
   return (
     <div className="body">
-      <div className="container_home">
-        <h2>Survivants</h2>
-        <CardsSurvivors survivorsInfos={SURVIVORS_DATA} />
-      </div>
+      <Header />
+      <div className="container_home"></div>
     </div>
   );
 };
